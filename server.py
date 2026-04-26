@@ -11,9 +11,8 @@ MODEL_PATH = "QuartzNet15x5_golos_nemo.nemo"
 asr_model = nemo_asr.models.EncDecCTCModel.restore_from(MODEL_PATH)
 
 
-@app.post("/aZj6awUBVn/")
+@app.post("/get_text_from_voice/")
 async def recognize(file: UploadFile = File(...)):
-    # Сохраняем загруженный файл во временную папку
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
         tmp.write(await file.read())
         tmp_path = tmp.name

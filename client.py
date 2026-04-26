@@ -1,6 +1,6 @@
 import requests
 
-url = "http://127.0.0.1:8000/aZj6awUBVn/"
+url = "http://127.0.0.1:8000/get_text_from_voice/"
 
 wav_file = "1.wav"
 
